@@ -348,22 +348,22 @@ if (typeof NProgress != 'undefined') {
 		
 		var arr_data1 = [
 			[gd(2012, 1, 1), 17],
-			[gd(2012, 1, 2), 74],
-			[gd(2012, 1, 3), 6],
-			[gd(2012, 1, 4), 39],
-			[gd(2012, 1, 5), 20],
-			[gd(2012, 1, 6), 85],
-			[gd(2012, 1, 7), 7]
+			[gd(2012, 1, 2), 14],
+			[gd(2012, 1, 3), 16],
+			[gd(2012, 1, 4), 13],
+			[gd(2012, 1, 5), 110],
+			[gd(2012, 1, 6), 185],
+			[gd(2012, 1, 7), 100]
 		];
 
 		var arr_data2 = [
-		  [gd(2012, 1, 1), 82],
+		  [gd(2012, 1, 1), 22],
 		  [gd(2012, 1, 2), 23],
-		  [gd(2012, 1, 3), 66],
-		  [gd(2012, 1, 4), 9],
-		  [gd(2012, 1, 5), 119],
-		  [gd(2012, 1, 6), 6],
-		  [gd(2012, 1, 7), 9]
+		  [gd(2012, 1, 3), 26],
+		  [gd(2012, 1, 4), 92],
+		  [gd(2012, 1, 5), 29],
+		  [gd(2012, 1, 6), 26],
+		  [gd(2012, 1, 7), 29]
 		];
 		
 		var arr_data3 = [
@@ -2968,7 +2968,7 @@ if (typeof NProgress != 'undefined') {
 					toolbox: {
 					  show: false
 					},
-					calculable: false,
+					calculable: true,
 					xAxis: [{
 					  type: 'category',
 					  data: ['1?', '2?', '3?', '4?', '5?', '6?', '7?', '8?', '9?', '10?', '11?', '12?']
@@ -3991,7 +3991,6 @@ if (typeof NProgress != 'undefined') {
 			   //echart Bar Horizontal
 			  
 			if ($('#echart_bar_horizontal').length ){ 
-			  
 			  var echartBar = echarts.init(document.getElementById('echart_bar_horizontal'), theme);
 
 			  echartBar.setOption({
@@ -4037,6 +4036,104 @@ if (typeof NProgress != 'undefined') {
 
 			} 
 			  
+			   //echart Bar Horizontal2
+			  
+			if ($('#echart_bar_horizontal2').length ){ 
+				console.log("여기 들어오냐");
+			  
+			  var echartBar = echarts.init(document.getElementById('echart_bar_horizontal2'), theme);
+
+			  echartBar.setOption({
+				title: {
+				  text: 'Bar Graph',
+				  subtext: 'Graph subtitle'
+				},
+				tooltip: {
+				  trigger: 'axis'
+				},
+				legend: {
+				  x: 100,
+				  data: ['2015', '2016']
+				},
+				toolbox: {
+				  show: true,
+				  feature: {
+					saveAsImage: {
+					  show: true,
+					  title: "Save Image"
+					}
+				  }
+				},
+				calculable: true,
+				xAxis: [{
+				  type: 'value',
+				  boundaryGap: [0, 0.01]
+				}],
+				yAxis: [{
+				  type: 'category',
+				  data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+				}],
+				series: [{
+				  name: '2015',
+				  type: 'bar',
+				  data: [18203, 23489, 29034, 104970, 131744, 630230]
+				}, {
+				  name: '2016',
+				  type: 'bar',
+				  data: [19325, 23438, 31000, 121594, 134141, 681807]
+				}]
+			  });
+
+			} 
+			
+			   //echart Bar Horizontal3
+			  
+			if ($('#echart_bar_horizontal3').length ){ 
+			  
+			  var echartBar = echarts.init(document.getElementById('echart_bar_horizontal3'), theme);
+
+			  echartBar.setOption({
+				title: {
+				  text: 'Bar Graph',
+				  subtext: 'Graph subtitle'
+				},
+				tooltip: {
+				  trigger: 'axis'
+				},
+				legend: {
+				  x: 100,
+				  data: ['2015', '2016']
+				},
+				toolbox: {
+				  show: true,
+				  feature: {
+					saveAsImage: {
+					  show: true,
+					  title: "Save Image"
+					}
+				  }
+				},
+				calculable: true,
+				xAxis: [{
+				  type: 'value',
+				  boundaryGap: [0, 0.01]
+				}],
+				yAxis: [{
+				  type: 'category',
+				  data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+				}],
+				series: [{
+				  name: '2015',
+				  type: 'bar',
+				  data: [18203, 23489, 29034, 104970, 131744, 630230]
+				}, {
+				  name: '2016',
+				  type: 'bar',
+				  data: [19325, 23438, 31000, 121594, 134141, 681807]
+				}]
+			  });
+
+			} 
 			   //echart Pie Collapse
 			  
 			if ($('#echart_pie2').length ){ 
